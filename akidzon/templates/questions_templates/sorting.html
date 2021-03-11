@@ -1,0 +1,27 @@
+{% load static %}
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <div class="">
+      <button type="button" class="btn btn-secondary disabled" name='category_id' id='category_id' hidden>{{category_id}}</button>
+        <h4>{{question_title}}</h4>
+        <ul class="list-group" id="drag_drop_sorting">
+          {% for item, correct_item in items_to_be_sorted %}
+            <li class="list-group-item form_to_be_checked" value_to_check='{{correct_item}}'>{{item}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+Sortable.create(drag_drop_sorting, {
+  animation: 100,
+  group: 'list-1',
+  draggable: '.list-group-item',
+  handle: '.list-group-item',
+  sort: true,
+  filter: '.sortable-disabled',
+  chosenClass: 'active'
+})
+</script>

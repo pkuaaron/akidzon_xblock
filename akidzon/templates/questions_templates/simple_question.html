@@ -1,0 +1,76 @@
+{% load static %}
+
+{%include 'questions_templates/questionhead_form_template.html' %}
+
+<div class = "flex-row" >
+  <div class = "col-10">
+      <table>
+        <tr class='thead-dark'>
+          {% for o in ordinal %}
+            {% if o in ordinal_shown %}
+             <th>{{o}}</th>
+             {%else%}
+              <th><th>
+            {%endif%}
+          {%endfor%}
+       </tr>
+      </table>
+  </div>
+</div>
+{% if thermometer %}
+<div class = "flex-row" >
+  <div class = "col-10">
+    <div id="thermo"></div>
+  </div>
+</div>
+{% endif %}
+
+{% if measure_item %}
+  <img src = " {% static 'akidzon_icons/' %}{{measure_item}}" style = "width: {{measure_width}};border: 1px solid #ddd;" >
+  <div style='width:800px'>
+    {%include 'questions_templates/ruler.html' %}
+  </div>
+{% endif %}
+
+{%include 'questions_templates/answer_form_template.html' %}
+
+<script>
+
+function imgCounting() {
+    var src = $(this).attr("src");
+    // Check the beginning of the src attribute
+    // Modify the src attribute based upon the state var we just set
+    if (src.indexOf("_bw.png") == -1) {
+      src = src.replace('.png', '_bw.png');
+      // $(this).css('background-color', 'gray');
+      count_index = count_index + parseInt($("#skipcounting").val());
+      tag_img = '<img src = "{% static "/akidzon_icons/counting_index/countingindex_count_index.png" %}" style = "position: relative; top: -70px; left: 20px; z-index: 2;" >'.replace('count_index',count_index);
+      $(this).parents('td').append(tag_img)
+    }
+    $(this).attr("src", src);
+}
+
+$('img.counting_picture').bind("click", imgCounting);
+
+$(".form_to_be_checked").keypress(function (e) {
+    if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+        $('button[type=submit].default_submit_btn').click();
+        return false;
+    } else {
+        return true;
+    }
+  });
+
+$(document).ready(function() {
+  if($('#thermo').length>0){
+    thermometer($('#thermo'));
+  }
+
+  $(".input_for_answers").keyup(function () {
+      if (this.value.length == this.maxLength) {
+        var $next = $(".input_for_answers").eq( $(".input_for_answers").index( $(this) ) - 1 );
+        $next.focus().select();
+      }
+  });
+});
+</script>

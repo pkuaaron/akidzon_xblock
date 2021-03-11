@@ -1,0 +1,110 @@
+{% load static %}
+
+
+<div id='user_answer_div'>
+
+  <div class="flex-row">
+      <div class='col-8' id="group">
+
+      <table class="{{answer_table_class}}">
+        <tbody>
+          <tr>
+          {% autoescape off %}
+            {{answer_table_head}}
+          {% endautoescape %}
+
+          {% for answer in answer_option_objects %}
+            {% if answer.option_type == "table_inputbox" %}
+              <td id="{{answer.html_tag_id}}" class="pt-3-half {{answer.html_tag_css}}" contenteditable="{{answer.html_tag_editable}}"
+                  value_to_check={{answer.value_to_check}} cell_checked="{{answer.user_answer}}" eval_method="{{answer.eval_method}}">
+                {{answer.value_to_display}}
+              </td>
+              {% if answer.new_row %}
+                </tr>
+                <tr>
+              {% endif %}
+            {% else %}
+              {% if answer.new_cell %}
+                <td nowrap  style='{{answer.td_style}}'>
+              {% endif%}
+
+              {% if answer.option_type == "display_only" %}
+                  {% autoescape off %}{{answer.value_to_display}}{% endautoescape %}
+              {% endif %}
+
+              {% if answer.option_type == "checkbox" %}
+                  <input type="checkbox" data-toggle="toggle" id="{{answer.html_tag_id}}"
+                    class="form_to_be_checked toggle_checkbox {{answer.html_tag_css}}"
+                    value_to_check='{{answer.value_to_check}}' data-on='{{answer.html_tag_data_on}}' data-off='{{answer.html_tag_data_off}}'
+                    data-width="{{answer.html_tag_width}}" {{answer.user_answer}} >
+              {% endif %}
+
+              {% if answer.option_type == "inputbox" %}
+                  <input  name='{{answer.html_tag_id}}' type='{{answer.html_tag_type}}' id='{{answer.html_tag_id}}' class="{{answer.html_tag_css}}"
+                    value_to_check='{{answer.value_to_check}}' value='{{answer.user_answer}}' text='{{answer.value_to_display}}'
+                    style='{{answer.html_tag_style}}; width:{{answer.html_tag_width}}px' maxLength='{{answer.max_length}}' {{answer.kwargs}} autofocus>
+              {% endif %}
+
+              {% if answer.option_type == "image_checkbox" %}
+                  <div class="row">
+                      <input type="checkbox" id='{{answer.html_tag_id}}' class="form_to_be_checked {{answer.html_tag_css}} toggle_checkbox" value_to_check='{{answer.value_to_check}}' {{answer.user_answer}} >
+                      <label for="{{answer.html_tag_id}}"><img src=" {% static 'akidzon_icons/' %}{{answer.img_src}}" style='{{answer.style}}'/></label>
+                  </div>
+              {% endif %}
+
+              {% if answer.option_type == "html_checkbox" %}
+                  <div class="row">
+                    <input type="checkbox" id='{{answer.html_tag_id}}' class="form_to_be_checked {{answer.html_tag_css}} toggle_checkbox"
+                        value_to_check='{{answer.value_to_check}}' {{answer.user_answer}}>
+                    <label for="{{answer.html_tag_id}}">{% autoescape off %}{{answer.html_body}}{% endautoescape %}</label>
+                  </div>
+              {% endif %}
+
+              {% if answer.new_cell %}
+                </td>
+                <td  style='{{answer.td_style}}'>
+              {% endif %}
+
+              {% if answer.new_row %}
+                {% if answer.new_cell %}
+                  </tr>
+                  <tr>
+                {% else %}
+                    </tr>
+                    <tr>
+                    <td  style='{{answer.td_style}}'>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  $(function(){ $('.toggle_checkbox').bootstrapToggle();
+  $(".one_option_checkbox").change(function() {
+   if ($(this).is(":checked")) {
+    $('.one_option_checkbox').not(this).each(function() {
+     $(this).bootstrapToggle('off');
+    });
+   }
+  });
+});
+
+$(document).ready(function() {
+  $('td.checkable').on('click', function (event) {
+      $target = $(event.target)
+      if($target.hasClass('checkable')){
+        $('td.checkable').removeClass('bg-success');
+        $('td.checkable').attr('cell_checked','false');
+        $target.addClass('bg-success');
+        $target.attr("cell_checked","true");
+      }
+  });
+})
+</script>

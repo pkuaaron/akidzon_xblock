@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>欢迎您，{{user.email}}</h1>
+<div class="container">
+	  <!-- Trigger the modal with a button -->
+	  <!-- Modal -->
+	  <div class="modal fade" id="addressModal" role="dialog">
+	    <div class="modal-dialog">
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h5 class="modal-title">添加地址</h5>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+				  <form id="address_form" class="form" role="form">
+
+						<div class="form-group row">
+						  <div class="col-md-2"></div>
+						  <div class="col-md-8">
+		        	{% include 'address_form.html' %}
+							<button class='form-control' type='submit' id='add_address' name='add_address' value='add'>确定</button>
+						</div>
+						</div>
+		      </form>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<div class="col-md-6">
+	<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-source="添加地址" data-target="#addressModal">添加送餐地址</button>
+
+	<div class="panel panel-primary">
+	<div class="panel-body"  style="min-height: 50px; max-height: 200px; overflow-y: scroll;" >
+	    <ul class="list-group">
+				{% for address in address_list%}
+	      <li class="list-group-item">
+	          <div class="checkbox">
+	              <input type="radio" name="deliver_addresses[]"/>
+	              <label for="checkbox">
+									{{address}}
+	              </label>
+		            <a data-toggle="modal" data-target="#addressModal" data-source="编辑地址"
+								data-address_id='{{address.id}}'
+								data-province='{{address.province.rid}}'
+								data-city='{{address.city.rid}}'
+								data-district='{{address.district.rid}}'
+								data-address_alias='{{address.address_alias}}'
+								data-street='{{address.street}}'
+								data-zipcode='{{address.zipcode}}' >
+									<span class="fas fa-edit" data-inline="false"></span></a>
+		            <a class="trash" data-inline="false"  data-toggle="modal"
+									data-target='#deleteModal'
+									data-address_id='{{address.id}}'
+									data-address_full={{address}}>
+										<span class="iconify" data-icon="octicon:trashcan"></span>
+								</a>
+	          </div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	</div>
+</div>
+<script>
+
+
+$('#addressModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var source = button.data('source') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this);
+	modal.find('.modal-title').text(source);
+	if(source=='编辑地址'){
+	  modal.find('#province').val(button.data('province')).trigger('change',
+			setTimeout(function(){
+					modal.find('#city').val(button.data('city')).trigger('change',
+						setTimeout(function(){modal.find('#district').val(button.data('district'));},100))
+						;},100)
+				);
+		modal.find('#street').val(button.data('street'));
+	  modal.find('#zipcode').val(button.data('zipcode'));
+		modal.find('#address_alias').val(button.data('address_alias'));
+		modal.find('#address_id').val(button.data('address_id'));
+	}
+});
+
+$('#deleteModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var address_id = button.data('address_id') // Extract info from data-* attributes
+	var address_full = button.data('address_full')
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this);
+	modal.find('#delete_address_id').val(address_id);
+	modal.find('#delete_address_full').text(address_full);
+});
+</script>
+{% endblock %}

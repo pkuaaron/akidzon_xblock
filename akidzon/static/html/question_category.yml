@@ -1,0 +1,1448 @@
+QuestionCategory:
+  753:
+    num_of_questions: 12
+    num_of_cols: 2
+    num_of_rows: 3
+    is_show_question_title: True
+    file_name: couting_upto_10
+    replace_values:
+      100px: 50px
+      150px: 50px
+      "100": "50"
+    scripts:  |
+      '''Counting review - up to 10'''
+      html_arguments = counting_by_pic(1,10,steps=1,answer_options=range(1,11), option_type='checkbox')
+  754:
+    num_of_questions: 48
+    num_of_cols: 2
+    num_of_rows: 6
+    is_show_question_title: True
+    file_name: couting_in_frame_10
+    replace_values:
+      100px: 50px
+      150px: 50px
+      "100": "50"
+    scripts:  |
+      '''Count to fill a ten frame'''
+      kwargs={'img_style':'height:50px; width:500px'}
+      html_arguments=counting_by_pic(1,10,steps=1,is_frame=True,answer_options=range(1,11), option_type='checkbox',kwargs=kwargs)
+  755:
+    num_of_questions: 24
+    num_of_cols: 2
+    num_of_rows: 2
+    is_show_question_title: True
+    file_name: couting_upto_20
+    replace_values:
+      100px: 50px
+      150px: 50px
+      "100": "50"
+    scripts:  |
+      '''Counting review - up to 20'''
+      html_arguments=counting_by_pic(11,20,steps=1,answer_options=range(11,21), option_type='checkbox')
+  756:
+    num_of_questions: 60
+    num_of_cols: 2
+    num_of_rows: 6
+    is_show_question_title: True
+    file_name: couting_upto_20
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Counting tens and ones - up to 20'''
+      kwargs={'img_style':'height:50px; width:500px'}
+      html_arguments=counting_by_pic(11,20,steps=1,is_frame=True, option_type='inputbox',kwargs=kwargs)
+  757:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 4
+    is_show_question_title: True
+    file_name: couting_upto_40
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Count on ten frames - up to 40'''
+      kwargs={'img_style':'height:50px; width:500px'}
+      html_arguments=counting_by_pic(21,40,steps=1,is_frame=True, option_type='inputbox',is_placeofvalue=True,kwargs=kwargs)
+  758:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 4
+    is_show_question_title: True
+    file_name: skipcounting_by2
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Skip-counting by twos'''
+      html_arguments=counting_by_pic(1,10, option_type='inputbox',steps=2)
+  759:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 4
+    is_show_question_title: True
+    file_name: skipcounting_by5
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Skip-counting by fives'''
+      html_arguments=counting_by_pic(1,10, option_type='inputbox',steps=5)
+  760:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 4
+    is_show_question_title: True
+    file_name: skipcounting_by10
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Skip-counting by tens'''
+      html_arguments=counting_by_pic(1,10, option_type='inputbox',steps=10)
+  761:
+    num_of_questions: 80
+    num_of_cols: 2
+    num_of_rows: 4
+    is_show_question_title: True
+    file_name: skipcounting_by_2_5_10
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Skip-counting by twos, fives, and tens'''
+      html_arguments=counting_by_pic(1,10,steps=0,step_options=[2,5,10], option_type='inputbox')
+  762:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 2
+    is_show_question_title: True
+    file_name: counting_upto100
+    replace_values:
+      100px: 50px
+      150px: 50px
+    scripts:  |
+      '''Counting - up to 100'''
+      kwargs={'img_style':'height:50px; width:500px'}
+      html_arguments=counting_by_pic(11,100,steps=1,is_frame=True, option_type='inputbox',kwargs=kwargs)
+  763:
+    num_of_questions: 40
+    num_of_cols: 2
+    num_of_rows: 2
+    is_show_question_title: True
+    file_name: counting_upto100
+    scripts:  |
+      '''Counting tens and ones - up to 99'''
+      kwargs={'img_style':'height:50px; width:500px'}
+      html_arguments=counting_by_pic(21,100,steps=1,is_frame=True, option_type='inputbox',kwargs=kwargs)
+  764:
+    num_of_questions: 160
+    num_of_cols: 2
+    num_of_rows: 8
+    is_show_question_title: True
+    file_name: skipcounting_by_2_5_10
+    scripts:  |
+      '''Counting by twos, fives, and tens'''
+      html_arguments=simple_counting(1,90,step_options=[2,5,10])
+  765:
+    scripts:  |
+      '''Counting forward - up to 100'''
+      html_arguments=simple_counting(1,90,steps=1,direction=[('forwards',1)])
+  766:
+    scripts:  |
+      '''Counting backwards - up to 100'''
+      html_arguments=simple_counting(1,90,steps=1,direction=[('backwards',-1)])
+  767:
+    scripts:  |
+      '''Counting forward - up to 120'''
+      html_arguments=simple_counting(100,120,steps=1,direction=[('forwards',1)])
+  769:
+    scripts:  |
+      '''Counting on the hundred chart'''
+      html_arguments=counting_with_table()
+  770:
+    scripts:  |
+      '''Hundred chart'''
+      html_arguments=counting_with_table(direction=[('more',1),('less',-1)])
+  771:
+    scripts:  |
+      '''Even or odd'''
+      shape = random.choice(['triangle', 'square', 'pentagon', 'octagon', 'circle'])
+      number=random.randint(1,20)
+      question_pictures = ['shapes/{shape}_{color_index}_vertical_count{number}.png'.format(shape=shape,color_index=random.choice(range(1,7)), number=number)]
+      answer_options = ['Odd', 'Even']
+      correct_value = 'Even' if number % 2 == 0 else 'Odd'
+      question_title = 'Is the number of {}s an odd or even?'.format(shape)
+      correct_value_index = answer_options.index(correct_value)
+      kwargs={'img_style':'height:75px'}
+      html_arguments=simple_question(question_title, question_pictures=question_pictures,correct_value_index=[correct_value_index], answer_options=answer_options, option_type='checkbox', kwargs =kwargs)
+  772:
+    scripts:  |
+      '''Identify numbers as even or odd'''
+      number=random.randint(1,20)
+      question_title = 'Is the number <strong>{}</strong> an odd or even?'.format(number)
+      answer_options = ['Odd', 'Even']
+      correct_value = 'Even' if number % 2 == 0 else 'Odd'
+      correct_value_index = answer_options.index(correct_value)
+      html_arguments=simple_question(question_title, correct_value_index=[correct_value_index], answer_options=answer_options,option_type='checkbox')
+  774:
+    scripts:  |
+      '''Which even or odd number comes before or after?'''
+      odd_even=[('odd',1),('even',0)]
+      size = 5
+      directions = [('before',0),('next',size-1)]
+      selected_direction = random.choice(directions)
+      selected_odd_even= random.choice(odd_even)
+      start_index=random.randint(1,50)
+      sequence_values=list(range(2+selected_odd_even[1],101,2))[start_index:start_index+5]
+      missing_index=[selected_direction[1]]
+      question_title='Which {} number comes {}?'.format(selected_odd_even[0],selected_direction[0])
+      html_arguments=simple_question(question_title, missing_index=missing_index, answer_options=sequence_values,option_type='inputbox')
+  776:
+    scripts:  |
+      '''Sequences - count up and down by 1, 2, 5, and 10'''
+      steps = random.choice([1,2,5,10])
+      start_index=random.randint(1,100//steps-7)
+      sequence_values=list(range(steps,101,steps))[start_index:start_index+6]
+      missing_index=random.sample(range(len(sequence_values)) ,random.randint(1,2))
+
+      question_title = 'Input the numbers that are missing in the sequence.'
+      html_arguments=simple_question(question_title, missing_index=missing_index, answer_options=sequence_values,option_type='inputbox')
+  777:
+    scripts:  |
+      '''Ordinal numbers'''
+      html_arguments=ordinal_counting()
+  778:
+    scripts:  |
+      '''Writing numbers in words - convert words to digits'''
+      correct_value=random.randint(1,30)
+      question_pictures=[]
+      question_title='How do you write the number of <strong>{}</strong>?'.format(utils.get_word_from_digits(correct_value))
+      answer_options = [correct_value]
+      html_arguments=simple_question(question_title,answer_options=answer_options,option_type='inputbox')
+  779:
+    scripts:  |
+      '''Writing numbers in words - convert digits to words'''
+      number =random.randint(1,30)
+      question_pictures=[]
+      question_title='How do you write the number <strong>{}</strong> of in words?'.format(number)
+      answer_options=[utils.get_word_from_digits(i) for i in set(random.sample(range(1,31),5)+[number])]
+      random.shuffle(answer_options)
+      correct_value=utils.get_word_from_digits(number)
+      correct_value_index=answer_options.index(correct_value)
+      html_arguments=simple_question(question_title,answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width='150')
+  781:
+    scripts:  |
+      '''Add with blocks - sums up to 10'''
+      pics_index=random.randint(1,5)
+      factor1=random.randint(1,9)
+      factor2=random.randint(1,9)
+      question_pictures = ['blocks/cube_horizon_add_{}_{}_{}_{}.png'.format(factor1,factor2,factor1+factor2,pics_index)]
+      html_arguments=two_numbers_operation(factor1,factor2,question_pictures=question_pictures)
+  782:
+    scripts:  |
+      '''Add with pictures - sums up to 10'''
+      pics_index=random.sample(range(1,8),2)
+      factor1=random.randint(1,9)
+      factor2=random.randint(1,9)
+      question_pictures = ['blocks/cube_horizon2_units_{}_{}.png'.format(factor1,pics_index[0]),'blocks/cube_horizon2_units_{}_{}.png'.format(factor2,pics_index[1])]
+      html_arguments=two_numbers_operation(factor1,factor2,question_pictures=question_pictures)
+  783:
+    scripts:  |
+      '''Addition sentences up to 10: what does the model show?'''
+      additions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1+x2<11]
+      options = random.sample(additions,5)
+      selected = random.choice(options)
+      factor1, factor2 = selected
+      correct_value_index=options.index(selected)
+      question_title='Which picture shows the <strong>{}+{}</strong>?'.format(factor1,factor2)
+      picture_options=['blocks/cube_horizon_add_{}_{}_{}_{}.png'.format(factor1,factor2,factor1+factor2,random.randint(1,5)) for factor1,factor2 in options]
+
+      html_arguments=simple_question(question_title,answer_options=picture_options,break_index=range(len(picture_options)),option_type='image_checkbox',correct_value_index=correct_value_index,style='height:45px')
+  785:
+    scripts:  |
+      '''Turn words into an addition sentence - sums up to 10'''
+      additions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1+x2<11]
+      factor1, factor2  = random.choice(additions)
+      correct_value='{}+{}={}'.format(factor1,factor2,factor1+factor2)
+      question_title='{} <br> Write the sentence using additions with + and = '.format(utils.get_word_expression(factor1,factor2))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox',input_type='text')
+  787:
+    scripts:  |
+      '''Adding zero'''
+      factor1,factor2 =random.sample([random.randint(1,10),0],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=True)
+  788:
+    scripts:  |
+      '''Adding 1'''
+      factor1,factor2 =random.sample([random.randint(1,10),1],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  789:
+    scripts:  |
+      '''Adding 2'''
+      factor1,factor2 =random.sample([random.randint(1,10),2],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  790:
+    scripts:  |
+      '''Adding 3'''
+      factor1,factor2 =random.sample([random.randint(1,10),3],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  791:
+    scripts:  |
+      '''Adding 4'''
+      factor1,factor2 =random.sample([random.randint(1,10),4],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  792:
+    scripts:  |
+      '''Adding 5'''
+      factor1,factor2 =random.sample([random.randint(1,10),5],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  793:
+    scripts:  |
+      '''Adding 6'''
+      factor1,factor2 =random.sample([random.randint(1,10),6],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  794:
+    num_of_questions: 100
+    num_of_cols: 4
+    num_of_rows: 22
+    scripts:  |
+      '''Adding 7'''
+      factor1,factor2 =random.sample([random.randint(1,10),7],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([True,True]))
+  795:
+    scripts:  |
+      '''Adding 8'''
+      factor1,factor2 =random.sample([random.randint(1,10),8],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  796:
+    scripts:  |
+      '''Adding 9'''
+      factor1,factor2 =random.sample([random.randint(1,10),9],2)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,True]))
+  797:
+    scripts:  |
+      '''Adding 10'''
+      factor1,factor2 =random.sample([random.randint(1,10),10],2)
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Adding 10',is_horizonal_equation=random.choice([False,True]))
+  798:
+    scripts:  |
+      '''Addition facts - sums up to 10'''
+      additions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1+x2<11]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Sum up to 10',is_horizonal_equation=random.choice([False,True]))
+  799:
+    num_of_questions: 24
+    num_of_cols: 1
+    num_of_rows: 6
+    is_show_question_title: True
+    scripts:  |
+      '''Make a number using addition - sums up to 10'''
+      additions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1+x2<11]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      num_options=6
+      other_options=[]
+      for a in additions:
+          if sum(a)!=sum(selected):
+              other_options.append(a)
+      answer_options = random.sample(other_options, num_options-1)+[selected]
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      answer_options=['{}+{}'.format(x1,x2) for x1, x2 in answer_options]
+      question_title='Which addition in the following makes <strong>{}</strong>?'.format(factor1+factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',break_index=range(-1,len(answer_options),3),correct_value_index=correct_value_index,option_width=150)
+  800:
+    num_of_questions: 88
+    num_of_cols: 4
+    num_of_rows: 22
+    is_show_question_title: False
+    file_name: addition_completion_10
+    scripts:  |
+      '''Complete the addition sentence - sums up to 10'''
+      additions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1+x2<15]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      indicators = ['display','number','display']
+      random.shuffle(indicators)
+      horizonal_equation=list(zip([indicators[0],'display',indicators[1],'display',indicators[2]],[factor1,'+',factor2,'=',factor1 + factor2]))
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Complete the addition sentence',horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  801:
+    scripts:  |
+      '''Ways to make a number - addition sentences up to 10'''
+      target = random.randint(5,10)
+      question_title='Fill out the table to list all the additions summing up to {}'.format(target)
+      factor_list1=list(range(target))
+      factor_list2= []
+      for f1 in factor_list1:
+          factor_list2.append(target - f1)
+      html_arguments=operation_enum(factor_list1,factor_list2, question_title=question_title)
+  803:
+    scripts:  |
+      '''Addition word problems - sums up to 10'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      number_of_factors=len(formula.split('+'))
+      options = utils.add_limit_factors(10,number_of_factors=number_of_factors)
+      factor3=0
+      if number_of_factors==3:
+          factor1, factor2, factor3 = random.choice(options)
+      else:
+          factor1, factor2 = random.choice(options)
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2,factor3=factor3))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2),factor3=factor_font.format(factor3))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  804:
+    scripts:  |
+      '''Addition sentences for word problems - sums up to 20'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      number_of_factors=len(formula.split('+'))
+      options = utils.add_limit_factors(20,number_of_factors=number_of_factors)
+      factor3=0
+      if number_of_factors==3:
+          factor1, factor2, factor3 = random.choice(options)
+      else:
+          factor1, factor2 = random.choice(options)
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2),factor3=factor_font.format(factor3))
+      question_title = question_title + '<br><br>Write an addition formula with + and = signs'
+      formula = wordproblem.answer_formula.format(factor1=factor1,factor2=factor2,factor3=factor3)
+      correct_value = eval(formula)
+      correct_value = formula + "={}".format(correct_value)
+      html_arguments=simple_question(question_title,answer_options = [correct_value],input_type='text',option_type='inputbox')
+  805:
+    num_of_questions: 88
+    num_of_cols: 2
+    num_of_rows: 11
+    is_show_question_title: False
+    file_name: addition_useline_upto20
+    scripts:  |
+      '''Addition sentences using number lines - sums up to 20'''
+      additions = [(x1,x2) for x1 in range(1,18) for x2 in range(1,6) if x1+x2<20]
+      selected = random.choice(additions)
+      question_pictures=['coords/add_{}{}_{}.png'.format(random.choice(['steps_','']),selected[0],selected[1])]
+      question_title='Write the addition based on what the picture shows?'
+      correct_value = '{}+{}={}'.format(selected[0],selected[1],sum(selected))
+      answer_options=['{}+{}={}'.format(f[0],f[1],sum(f)) for f in set(random.sample(additions,5)+[selected])]
+      random.shuffle(answer_options)
+      correct_value_index = answer_options.index(correct_value)
+      html_arguments1=simple_question(question_title,question_pictures=question_pictures,answer_options=answer_options,option_type='checkbox',
+        correct_value_index=correct_value_index,option_width='150',break_index=[2],kwargs = {'img_style': 'height:100%; width:100%'})
+      html_arguments2=two_numbers_operation(selected[0],selected[1],question_title=question_title,question_pictures=question_pictures,is_horizonal_equation=True)
+      html_arguments = random.choice([html_arguments1,html_arguments2])
+  806:
+    scripts:  |
+      '''Addition facts - sums up to 20'''
+      options = utils.add_limit_factors(20,number_of_factors=2)
+      factor1,factor2 =random.choice(options)
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Adding up to 20',is_horizonal_equation=random.choice([False,True]))
+  807:
+    scripts:  |
+      '''Make a number using addition - sums up to 20'''
+      additions = [(x1,x2) for x1 in range(9,20) for x2 in range(20) if x1+x2<21]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      num_options=6
+      other_options=[]
+      for a in additions:
+          if sum(a)!=sum(selected):
+              other_options.append(a)
+      answer_options = random.sample(other_options, num_options-1)+[selected]
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      answer_options=['{}+{}'.format(x1,x2) for x1, x2 in answer_options]
+      question_title='Which addition in the following makes <strong>{}</strong>?'.format(factor1+factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,break_index=[2],option_width=150)
+  808:
+    scripts:  |
+      '''Complete the addition sentence - sums up to 20'''
+      additions = [(x1,x2) for x1 in range(9, 21) for x2 in range(21) if x1+x2<21]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      indicators = ['display','display','number']
+      random.shuffle(indicators)
+      horizonal_equation=list(zip([indicators[0],'display',indicators[1],'display',indicators[2]],[factor1,'+',factor2,'=',factor1 + factor2]))
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Complete the addition sentence',horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  809:
+    scripts:  |
+      '''Addition word problems - sums up to 20'''
+      q_index = random.randint(18,34)
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      number_of_factors=len(formula.split('+'))
+      options = utils.add_limit_factors(20,number_of_factors=number_of_factors)
+      factor3=0
+      if number_of_factors==3:
+          factor1, factor2, factor3 = random.choice(options)
+      else:
+          factor1, factor2 = random.choice(options)
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2,factor3=factor3))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2),factor3=factor_font.format(factor3))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  810:
+    scripts:  |
+      '''Addition sentences for word problems - sums up to 20'''
+      q_index = random.randint(18,34)
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      number_of_factors=len(formula.split('+'))
+      options = utils.add_limit_factors(20,number_of_factors=number_of_factors)
+      factor3=0
+      if number_of_factors==3:
+          factor1, factor2, factor3 = random.choice(options)
+      else:
+          factor1, factor2 = random.choice(options)
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2),factor3=factor_font.format(factor3))
+      question_title = question_title + '<br><br>Write an addition formula with + and = signs'
+      formula = wordproblem.answer_formula.format(factor1=factor1,factor2=factor2,factor3=factor3)
+      correct_value = eval(formula)
+      correct_value = formula + "={}".format(correct_value)
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox',input_type='text')
+  811:
+    scripts:  |
+      '''Related addition facts'''
+      num_options=6
+      options = utils.add_limit_factors(20,number_of_factors=2)
+      factor1, factor2 = random.choice(options)
+      selected = '{}+{}={}'.format(factor2,factor1,factor1+factor2)
+      options = ['{}+{}={}'.format(factor1,factor2,factor1+factor2) for factor1, factor2 in options]
+      answer_options = list(set(random.sample(options, num_options-1)+[selected]))
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      question_title='Which is the related addition fact for {}+{}={}?'.format(factor1, factor2,factor1+factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',break_index=[2],correct_value_index=correct_value_index,option_width=150)
+  812:
+    scripts:  |
+      '''Addition sentences: true or false?'''
+      answer_options = ['True','False']
+      options = utils.add_limit_factors(20,number_of_factors=2)
+      factor1, factor2 = random.choice(options)
+      correct_value_index = random.choice([0,1])
+      if correct_value_index==0:
+          question_title='Is the following addition false or true? <br>{}+{}={}?'.format(factor1, factor2,factor1+factor2)
+      else:
+          question_title='Is the following addition false or true? <br>{}+{}={}?'.format(factor1, factor2,utils.make_a_wrong_result(factor1,factor2,operation='+'))
+      html_arguments=simple_question(question_title,answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  813:
+    scripts:  |
+      '''Which addition sentences is true?'''
+      options = utils.add_limit_factors(20,number_of_factors=2)
+      number_of_options = random.randint(2,3)
+      selected_options = random.sample(options,number_of_options)
+      correct_value_index = random.randint(0,number_of_options-1)
+      answer_options = []
+      for i, s in enumerate(selected_options):
+          if i == correct_value_index:
+              answer_options.append('{}+{}={}'.format(s[0],s[1],s[0]+s[1]))
+          else:
+              answer_options.append('{}+{}={}'.format(s[0], s[1],utils.make_a_wrong_result(s[0],s[1],operation='+')))
+      question_title='Which addition sentence is True?'
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  815:
+    scripts:  |
+      '''Add a one-digit number to a two-digit number - without regrouping'''
+      tens = random.randint(1,9)
+      options = utils.add_limit_factors(9,number_of_factors=2)
+      factor1, factor2 = random.choice(options)
+      factor1 = tens*10 + factor1
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Complete the addition sentence',is_horizonal_equation=False)
+  816:
+    scripts:  |
+      '''Regroup tens and ones - ways to make a number'''
+      tens = random.randint(2,9)
+      ones = random.randint(1,9)
+      number = tens*10+ones
+      non_standard_tens, non_standard_ones = utils.make_a_number(number, standard = False)
+      question_title='{} is {} tens plus {} ones. Which is another way to make {}'.format(number, tens, ones, number)
+      answer_options=[]
+      if tens!=ones:
+        answer_options.append('{} tens plus {} ones'.format(ones, tens))
+      else:
+        answer_options.append('{} tens plus {} ones'.format(tens,ones+10))
+      answer_options.append('{} tens plus {} ones'.format(tens+1,ones ))
+      answer_options.append('{} tens plus {} ones'.format(tens-1,ones ))
+      answer_options.append('{} tens plus {} ones'.format(tens-1,ones+20 ))
+      answer_options.append('{} tens plus {} ones'.format(tens+1,ones+10 ))
+      correct_value='{} tens plus {} ones'.format(non_standard_tens,non_standard_ones )
+      answer_options.append(correct_value)
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(correct_value)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',break_index=[2],correct_value_index=correct_value_index,option_width=250)
+  817:
+    scripts:  |
+      '''Regroup tens and ones'''
+      additions = [(x1*10,x2) for x1 in range(1, 9) for x2 in range(10,90) if x1*10+x2<100]
+      selected = random.choice(additions)
+      factor1, factor2 = selected
+      indicators = ['display','number','display','number','display']
+      total = factor1 + factor2
+      tens = total//10
+      ones = total%10
+      horizonal_equation=list(zip(indicators,['{} tens + {} ones = '.format(factor1//10,factor2),tens,'tens + ',ones,' ones']))
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Regroup. Write a number from 0 to 9 in each box.',horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  818:
+    scripts:  |
+      '''Use models to add a two-digit and a one-digit number - with regrouping'''
+      tens = random.randint(1,8)
+      options = [(x1,x2) for x1 in range(1,10) for x2 in range(1,10) if x1+x2>10 ]
+      factor1, factor2 = random.choice(options)
+      factor1 = tens*10 + factor1
+      total = factor1 + factor2
+      tens = total // 10
+      ones = total%10
+      question_title = '''The blocks show {}+{}.<br>There are enough ones to regroup into a ten. How many tens and ones would you have if you regrouped?'''.format(factor1,factor2)
+      indicators = ['number','display','number','display','display', 'display', 'number']
+      horizonal_equations = list(zip(indicators, [tens, 'tens + ', ones, ' ones', 'Complete the addition sentence', '{}+{}='.format(factor1, factor2), total]))
+      question_pictures = ['blocks/cube_vertical3_units_{}_1.png'.format(factor1),'signs/add.png','blocks/cube_vertical3_units_{}_1.png'.format(factor2)]
+      html_arguments=two_numbers_operation(factor1,factor2,question_title=question_title,question_pictures=question_pictures,horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  819:
+    scripts:  |
+      '''Add a one-digit number to a two-digit number - with regrouping'''
+      tens = random.randint(1,8)
+      options = [(x1,x2) for x1 in range(1,10) for x2 in range(1,10) if x1+x2>10 ]
+      factor1, factor2 = random.choice(options)
+      factor1 = tens*10 + factor1
+      total = factor1 + factor2
+      html_arguments=two_numbers_operation(factor1,factor2,question_title='Complete the addition sentence',is_horizonal_equation=False)
+  820:
+    scripts:  |
+      '''Addition word problems - one-digit plus two-digit numbers'''
+      tens = random.randint(1,8)
+      options = [(x1,x2) for x1 in range(1,10) for x2 in range(1,10) if x1+x2>10 ]
+      factor1, factor2 = random.choice(options)
+      factor1 = tens*10 + factor1
+      wordproblem = random.choice(WordQuestion.objects.filter(question_factors=2,question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  821:
+    scripts:  |
+      '''Addition sentences for word problems - one-digit plus two-digit numbers'''
+      tens = random.randint(1,8)
+      options = [(x1,x2) for x1 in range(1,10) for x2 in range(1,10) if x1+x2>10 ]
+      factor1, factor2 = random.choice(options)
+      factor1 = tens*10 + factor1
+      wordproblem = random.choice(WordQuestion.objects.filter(question_factors=2,question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))
+      question_title = question_title + '<br><br>Write an addition formula with + and = signs'
+      formula = formula.format(factor1=factor1,factor2=factor2)
+      correct_value = eval(formula)
+      correct_value = formula + "={}".format(correct_value)
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox',input_type='text')
+  822:
+    scripts:  |
+      '''Add doubles - with models'''
+      pics_index=random.randint(1,5)
+      shape = random.choice(['triangle', 'square', 'pentagon', 'octagon', 'circle'])
+      factor1=random.randint(1,10)
+      question_pictures = ['shapes/{}_{}_vertical_count{}.png'.format(shape,pics_index,factor1*2)]
+      html_arguments=two_numbers_operation(factor1,factor1,question_pictures=question_pictures,is_horizonal_equation=random.choice([True,False]))
+  823:
+    scripts:  |
+      '''Add doubles'''
+      factor1=random.randint(1,10)
+      html_arguments=two_numbers_operation(factor1,factor1,is_horizonal_equation=random.choice([True,False]))
+  824:
+    scripts:  |
+      '''Add doubles - complete the sentence'''
+      factor1=random.randint(1,10)
+      indicators = ['number','display','number','display','display']
+      horizonal_equation=list(zip(indicators,[factor1,'+',factor1,'=',factor1*2]))
+      html_arguments=two_numbers_operation(factor1,factor1,question_title='Complete the doubles fact for {}.'.format(factor1*2),horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  825:
+    scripts:  |
+      '''Add using doubles plus one'''
+      factor1=random.randint(1,10)
+      indicators = ['display','number','new_row','display','number']
+      equations=['Complete the double addition:&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {}+{}='.format(factor1,factor1),factor1*2,'','Complete the near double addition: {}+{}='.format(factor1,factor1+1),factor1*2+1]
+      horizonal_equations = zip(indicators,equations)
+      html_arguments=two_numbers_operation(factor1,factor1,question_title=' '.format(factor1*2),horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  826:
+    scripts:  |
+      '''Add using doubles minus one'''
+      factor1=random.randint(1,10)
+      indicators = ['display','number','new_row','display','number']
+      equations=['Complete the double addition:&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {}+{}='.format(factor1,factor1),factor1*2,'','Complete the near double addition: {}+{}='.format(factor1,factor1-1),factor1*2-1]
+      horizonal_equations = zip(indicators,equations)
+      html_arguments=two_numbers_operation(factor1,factor1,question_title=' '.format(factor1*2),horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  827:
+    scripts:  |
+      '''Add three numbers - use doubles'''
+      factor1=random.randint(1,10)
+      factor2=random.randint(1,10)
+      indicators = ['display','number']
+      horizonal_equation=list(zip(indicators,['{}+{}+{}='.format(factor1,factor1,factor2),factor1*2+factor2]))
+      html_arguments=two_numbers_operation(factor1,factor1,question_title='Complete the following addition.',horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  828:
+    scripts:  |
+      '''Complete the addition sentence - make ten'''
+      factor1=random.randint(1,10)
+      indicators=['display','number']
+      random.shuffle(indicators)
+      indicators.append('display')
+      if indicators[0]=='display':
+          horizonal_equations=list(zip(indicators,['{}+'.format(factor1),10-factor1,'={}'.format(10)]))
+      else:
+          horizonal_equations=list(zip(indicators,[factor1,'+{}'.format(10-factor1),'={}'.format(10)]))
+      html_arguments=two_numbers_operation(factor1,factor1,question_title='Complete the following addition making a ten.',horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  829:
+    scripts:  |
+      '''Add three numbers - making a ten'''
+      factor1=random.randint(1,10)
+      factor2=random.randint(1,10)
+      indicators = ['display','number']
+      factors = [factor1,10-factor1,factor2]
+      random.shuffle(factors)
+      horizonal_equation=list(zip(indicators,['{}+{}+{}='.format(factors[0],factors[1],factors[2]),10+factor2]))
+      html_arguments=two_numbers_operation(factor1,factor1,question_title='Complete the following addition.',horizonal_equations=horizonal_equation,is_horizonal_equation=True)
+  830:
+    scripts:  |
+      '''Use models to add a multiple of ten and a one-digit number'''
+      tens = random.randint(1,9)
+      factor2 = random.randint(1,9)
+      factor1 = tens*10
+      total = factor1 + factor2
+      tens = total // 10
+      ones = total%10
+      question_title = '''The blocks show {}+{}.<br>How many tens and ones would you have if adding them up?'''.format(factor1,factor2)
+      indicators = ['number','display','number','display','new_row','display', 'display', 'number']
+      horizonal_equations = list(zip(indicators, [tens, 'tens + ', ones, ' ones', '','Complete the addition sentence', '{}+{}='.format(factor1, factor2), total]))
+      question_pictures = ['blocks/cube_vertical3_units_{}_1.png'.format(factor1),'signs/add.png','blocks/cube_vertical3_units_{}_1.png'.format(factor2)]
+      html_arguments=two_numbers_operation(factor1,factor2,question_title=question_title,question_pictures=question_pictures,horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  831:
+    scripts:  |
+      '''Add a multiple of ten and a one-digit number'''
+      factor1=random.randint(1,9)*10
+      factor2=random.randint(1,9)
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([False,False]))
+  832:
+    scripts:  |
+      '''Add two multiples of ten'''
+      factor1=random.randint(0,9)*10
+      factor2=random.randint(0,9)*10
+      html_arguments=two_numbers_operation(factor1,factor2,is_horizonal_equation=random.choice([True,False]))
+  833:
+    scripts:  |
+      '''Use models to add a multiple of ten and a two-digit number'''
+      tens = random.randint(1,9)
+      factor2 = random.randint(10,30)
+      factor1 = tens*10
+      total = factor1 + factor2
+      tens = total // 10
+      ones = total%10
+      question_title = '''The blocks show {}+{}.<br>How many tens and ones would you have if adding them up?'''.format(factor1,factor2)
+      indicators = ['number','display','number','display','display', 'display', 'number']
+      horizonal_equations = list(zip(indicators, [tens, 'tens + ', ones, ' ones', 'Complete the addition sentence', '{}+{}='.format(factor1, factor2), total]))
+      question_pictures = ['blocks/cube_vertical3_units_{}_1.png'.format(factor1),'signs/add.png','blocks/cube_vertical3_units_{}_1.png'.format(factor2)]
+      html_arguments=two_numbers_operation(factor1,factor2,question_title=question_title,question_pictures=question_pictures,
+        horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  835:
+    scripts:  |
+      '''Add three numbers'''
+      tens = random.randint(1,9)
+      factor1 = random.randint(1,10)
+      factor2 = random.randint(1,10)
+      factor3 = random.randint(1,10)
+      indicators = ['display','number']
+      horizonal_equations=list(zip(indicators,['{}+{}+{}='.format(factor1,factor2,factor3),factor1+factor2+factor3]))
+      question_title='Add the following 3 numbers?'
+      html_arguments=two_numbers_operation(factor1,factor2,question_title=question_title,horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  836:
+    scripts:  |
+      '''Add three numbers - word problems'''
+      factor1 = random.randint(1,10)
+      factor2 = random.randint(1,10)
+      factor3 = random.randint(1,10)
+      wordproblem = random.choice(WordQuestion.objects.filter(question_factors=3,question_type='Addition'))
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2,factor3=factor3))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2),factor3=factor_font.format(factor3))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  838:
+    scripts:  |
+      '''Subtract with pictures - up to 10'''
+      pics_index=random.randint(1,5)
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,factor1-1)
+      question_pictures = ['blocks/cube_horizon_subtraction_{}_{}_{}_{}.png'.format(factor1-factor2,factor2,factor1,pics_index)]
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',question_pictures=question_pictures)
+  839:
+    scripts:  |
+      '''Subtraction sentences up to 10: which model matches?'''
+      pics_index=random.randint(1,5)
+      subtractions = [(x1,x2) for x1 in range(1,10) for x2 in range(1,11) if x1-x2<10 and x1-x2>0]
+      options = random.sample(subtractions,5)
+      selected = random.choice(options)
+      factor1, factor2 = selected
+      correct_value_index=options.index(selected)
+      question_title='Which picture shows the <strong>{}-{}</strong>?'.format(factor1,factor2)
+      picture_options=['blocks/cube_horizon_subtraction_{}_{}_{}_{}.png'.format(factor1-factor2,factor2,factor1,random.randint(1,5)) for factor1,factor2 in options]
+
+      html_arguments=simple_question(question_title,answer_options=picture_options,break_index=range(len(picture_options)),option_type='image_checkbox',correct_value_index=correct_value_index)
+  840:
+    scripts:  |
+      '''Subtraction sentences up to 10: what does the model show?'''
+      pics_index=random.randint(1,5)
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,factor1-1)
+      question_pictures = ['blocks/cube_horizon_subtraction_{}_{}_{}_{}.png'.format(factor1-factor2,factor2,factor1,pics_index)]
+      question_title = 'Write a subtraction sentence based on the picture?<br>For example:<i>5-2=3</i>'
+      correct_value = '{}-{}={}'.format(factor1,factor2,factor1-factor2)
+      html_arguments=simple_question(question_title,answer_options=[correct_value], option_type='inputbox',question_pictures=question_pictures,input_type='text')
+  841:
+    scripts:  |
+      '''Subtraction sentences using number lines - up to 10'''
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,min(5,factor1-1))
+      selected = (factor1, factor2)
+      question_pictures=['coords/subtraction_{}{}_{}.png'.format(random.choice(['steps_','']),selected[0],selected[1])]
+      question_title='Write the subtraction sentence based on what the picture shows?'
+      correct_value = '{}-{}={}'.format(selected[0],selected[1],selected[0]-selected[1])
+      subtractions = [(x1,x2) for x1 in range(1,10) for x2 in range(1,11) if x1-x2<10 and x1-x2>0]
+      answer_options=['{}-{}={}'.format(f[0],f[1],f[0]-f[1]) for f in set(random.sample(subtractions,5)+[selected])]
+      random.shuffle(answer_options)
+      correct_value_index = answer_options.index(correct_value)
+      html_arguments1=simple_question(question_title,question_pictures=question_pictures,answer_options=[answer_options[:2],answer_options[2:]],option_type='checkbox',correct_value_index=correct_value_index,option_width='150')
+      html_arguments2=two_numbers_operation(selected[0],selected[1], operation='-', question_title=question_title,question_pictures=question_pictures,is_horizonal_equation=True)
+      html_arguments = random.choice([html_arguments1,html_arguments2])
+  842:
+    scripts:  |
+      '''Turn words into a subtraction sentence - up to 10'''
+      subtractions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1-x2<10 and x1-x2>0]
+      factor1, factor2  = random.choice(subtractions)
+      correct_value='{}-{}={}'.format(factor1,factor2,factor1-factor2)
+      question_title='{} <br> Write the sentence using subtraction with – and = '.format(utils.get_word_expression(factor1,factor2,operation='-'))
+      html_arguments=simple_question(question_title,correct_value,input_type='text')
+  843:
+    scripts:  |
+      '''Subtract zero and all'''
+      factor1=random.randint(1,20)
+      factor2=random.choice([factor1,0])
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  844:
+    scripts:  |
+      '''Subtracting 1'''
+      factor2=1
+      factor1=random.randint(1,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  845:
+    scripts:  |
+      '''Subtracting 2'''
+      factor2=2
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  846:
+    scripts:  |
+      '''Subtracting 3'''
+      factor2=3
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  847:
+    scripts:  |
+      '''Subtracting 4'''
+      factor2=4
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  848:
+    scripts:  |
+      '''Subtracting 5'''
+      factor2=5
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  849:
+    scripts:  |
+      '''Subtracting 6'''
+      factor2=6
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  850:
+    scripts:  |
+      '''Subtracting 7'''
+      factor2=7
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  851:
+    scripts:  |
+      '''Subtracting 8'''
+      factor2=8
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  852:
+    scripts:  |
+      '''Subtracting 9'''
+      factor2=9
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  853:
+    scripts:  |
+      '''Subtracting 0'''
+      factor2=0
+      factor1=random.randint(factor2,20)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  854:
+    scripts:  |
+      '''Subtraction facts - up to 10'''
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,factor1)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([True,False]))
+  855:
+    scripts:  |
+      '''Make a number using subtraction - up to 10'''
+      subtractions = [(x1,x2) for x1 in range(1,11) for x2 in range(1,11) if x1-x2<10 and x1-x2>0]
+      selected = random.choice(subtractions)
+      factor1, factor2 = selected
+      num_options=6
+      other_options=[]
+      for a in subtractions:
+          if a[0]-a[1]!=selected[0]-selected[1]:
+              other_options.append(a)
+      answer_options = random.sample(other_options, num_options-1)+[selected]
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      answer_options=['{}-{}'.format(x1,x2) for x1, x2 in answer_options]
+      question_title='Which subtraction in the following makes <strong>{}</strong>?'.format(factor1-factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  856:
+    scripts:  |
+      '''Ways to make a number - subtraction sentences up to 10'''
+      target = random.randint(1,5)
+      question_title='Find the pattern and fill the table to use subtraction sentence to make {}'.format(target)
+      factor_list1=list(range(target,11))
+      factor_list2= []
+      for f1 in factor_list1:
+          factor_list2.append(f1-target)
+      html_arguments=operation_enum(factor_list1,factor_list2, operation='-',question_title=question_title)
+  857:
+    scripts:  |
+      '''Ways to subtract from a number - subtraction sentences up to 10'''
+      factor1 = random.randint(5,10)
+      question_title='Find the pattern and type the missing subtraction sentence with minuend of {}'.format(factor1)
+      factor_list2=range(factor1+1)
+      factor_list1=[factor1]*len(factor_list2)
+      html_arguments=operation_enum(factor_list1,factor_list2, operation='-',question_title=question_title)
+  858:
+    scripts:  |
+      '''Complete the subtraction sentence - up to 10'''
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(0,factor1)
+      indicators=['display','number']
+      random.shuffle(indicators)
+      indicators.append('display')
+      if indicators[0]=='display':
+          horizonal_equations=[list(zip(indicators,['{}-'.format(factor1),factor2,'={}'.format(factor1-factor2)]))]
+      else:
+          horizonal_equations=[list(zip(indicators,[factor1,'-{}'.format(factor2),'={}'.format(factor1-factor2)]))]
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Fill the missing part to complete the subtraction.',horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  860:
+    scripts:  |
+      '''Subtraction word problems - up to 10'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Subtraction',question_factors=2))
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,factor1)
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  861:
+    scripts:  |
+      '''Subtraction word problems - up to 10'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Subtraction',question_factors=2))
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(1,factor1)
+      formula = wordproblem.answer_formula
+      formula = formula.format(factor1=factor1,factor2=factor2)
+      correct_value = '{}={}'.format(formula,eval(formula))
+      q_instance = wordproblem.get_question_instance()
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))+ '<br><br>Write an subtraction formula with – and = signs'
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox',input_type='text')
+  862:
+    num_of_questions: 90
+    num_of_cols: 2
+    num_of_rows: 9
+    is_show_question_title: False
+    file_name: subtraction_useline_upto20
+    scripts:  |
+      '''Subtraction sentences using number lines - up to 20'''
+      factor1 = random.randint(8,20)
+      factor2 = random.randint(1,min(5,factor1-1))
+      selected = (factor1, factor2)
+      # random.choice(['steps_',''])
+      question_pictures=['coords/subtraction_{}{}_{}.png'.format('',selected[0],selected[1])]
+      question_title='Write the subtraction sentence based on what the picture shows?'
+      correct_value = '{}-{}={}'.format(selected[0],selected[1],selected[0]-selected[1])
+      subtractions = [(x1,x2) for x1 in range(1,10) for x2 in range(1,11) if x1-x2<10 and x1-x2>0]
+      answer_options=['{}-{}={}'.format(f[0],f[1],f[0]-f[1]) for f in set(random.sample(subtractions,5)+[selected])]
+      random.shuffle(answer_options)
+      correct_value_index = answer_options.index(correct_value)
+      html_arguments1=simple_question(question_title,question_pictures=question_pictures,answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width='150')
+      html_arguments2=two_numbers_operation(selected[0],selected[1], operation='-', question_title=question_title,question_pictures=question_pictures,is_horizonal_equation=True)
+      html_arguments = random.choice([html_arguments1,html_arguments2][1:])
+  863:
+    scripts:  |
+      '''Subtraction facts - up to 20'''
+      factor1 = random.randint(2,20)
+      factor2 = random.randint(1,factor1)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-',is_horizonal_equation=random.choice([False,False]))
+  864:
+    scripts:  |
+      '''Make a number using subtraction - up to 20'''
+      subtractions = [(x1,x2) for x1 in range(10,20) for x2 in range(1,20) if x1-x2<10 and x1-x2>0]
+      selected = random.choice(subtractions)
+      factor1, factor2 = selected
+      num_options=6
+      other_options=[]
+      for a in subtractions:
+          if a[0]-a[1]!=selected[0]-selected[1]:
+              other_options.append(a)
+      answer_options = random.sample(other_options, num_options-1)+[selected]
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      answer_options=['{}-{}'.format(x1,x2) for x1, x2 in answer_options]
+      question_title='Which subtraction in the following makes <strong>{}</strong>?'.format(factor1-factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  865:
+    scripts:  |
+      '''Complete the subtraction sentence - up to 20'''
+      factor1 = random.randint(10,20)
+      factor2 = random.randint(0,factor1)
+      indicators=['display','number']
+      random.shuffle(indicators)
+      indicators.append('display')
+      if indicators[0]=='display':
+          horizonal_equations=[list(zip(indicators,['{}–'.format(factor1),factor2,'={}'.format(factor1-factor2)]))]
+      else:
+          horizonal_equations=[list(zip(indicators,[factor1,'–{}'.format(factor2),'={}'.format(factor1-factor2)]))]
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Fill the missing part to complete the subtraction.',horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  866:
+    scripts:  |
+      '''Subtraction word problems - up to 20'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Subtraction',question_factors=2))
+      factor1 = random.randint(10,20)
+      factor2 = random.randint(1,factor1)
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  867:
+    scripts:  |
+      '''Subtraction word problems - up to 20'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_type='Subtraction',question_factors=2))
+      factor1 = random.randint(10,20)
+      factor2 = random.randint(1,factor1)
+      formula = wordproblem.answer_formula
+      formula = formula.format(factor1=factor1,factor2=factor2)
+      correct_value = '{}={}'.format(formula,eval(formula))
+      q_instance = wordproblem.get_question_instance()
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))+ '<br><br>Write an subtraction formula with – and = signs'
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox',input_type='text')
+  868:
+    scripts:  |
+      '''Related subtraction facts'''
+      num_options=6
+      factor1 = random.randint(2,20)
+      factor2 = random.randint(1,factor1-1)
+      options = [(x1,x2) for x1 in range(20) for x2 in range(20) if x1-x2>0]
+      selected = '{}–{}={}'.format(factor1,factor1-factor2,factor2)
+      options = ['{}–{}={}'.format(factor1,factor2,factor1-factor2) for factor1, factor2 in options]
+      answer_options = list(set(random.sample(options, num_options-1)+[selected]))
+      random.shuffle(answer_options)
+      correct_value_index=answer_options.index(selected)
+      question_title='Which is the related subtraction fact for {}–{}={}?'.format(factor1, factor2,factor1-factor2)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  869:
+    scripts:  |
+      '''Subtraction sentences: true or false?'''
+      answer_options = ['True','False']
+      factor1 = random.randint(2,20)
+      factor2 = random.randint(1,factor1-1)
+      correct_value_index = random.choice([0,1])
+      if correct_value_index==0:
+          question_title='Is the following subtraction false or true? <br>{}–{}={}?'.format(factor1, factor2,factor1-factor2)
+      else:
+          question_title='Is the following addition false or true? <br>{}–{}={}?'.format(factor1, factor2,utils.make_a_wrong_result(factor1,factor2,operation='-'))
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  870:
+    scripts:  |
+      '''Which Subtraction sentences is true?'''
+      options = [(x1,x2) for x1 in range(1,20) for x2 in range(1,20) if x1-x2>0]
+      number_of_options = random.randint(2,3)
+      selected_options = random.sample(options,number_of_options)
+      correct_value_index = random.randint(0,number_of_options-1)
+      answer_options = []
+      for i, s in enumerate(selected_options):
+          if i == correct_value_index:
+              answer_options.append('{}–{}={}'.format(s[0],s[1],s[0]-s[1]))
+          else:
+              answer_options.append('{}–{}={}'.format(s[0], s[1],utils.make_a_wrong_result(s[0],s[1],operation='-')))
+      question_title='Which addition sentence is True?'
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  871:
+    scripts:  |
+      '''Subtract one-digit numbers from two-digit numbers'''
+      options = [(x1,x2) for x1 in range(10,100) for x2 in range(1,10) if x1-x2>0]
+      factor1, factor2 = random.choice(options)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Complete the subtraction sentence',is_horizonal_equation=False)
+  872:
+    scripts:  |
+      '''Relate addition and subtraction sentences'''
+      options = [(x1,x2) for x1 in range(1,20) for x2 in range(1,20) if x1+x2<=20]
+      factor1, factor2 = random.choice(options)
+      addition_formulas=random.choice([[factor1,'+',factor2,'=',factor1+factor2],[factor2,'+',factor1,'=',factor1+factor2]])
+      subtraction_formulas=random.choice([[factor1+factor2,'–',factor2,'=',factor1],[factor1+factor2,'–',factor2,'=',factor1]])
+      if_part,then_part = random.sample([addition_formulas,subtraction_formulas],2)
+      question_title = '''If {}, then'''.format(''.join([str(x) for x in if_part]))
+      indicators = ['number','display','display']
+      random.shuffle(indicators)
+      horizonal_equations=[list(zip([indicators[0],'display',indicators[1],'display',indicators[2]],then_part))]
+      html_arguments=two_numbers_operation(factor1,factor2,question_title=question_title,horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  873:
+    scripts:  |
+      '''Subtract one-digit numbers from two-digit numbers'''
+      factor2 = random.randint(1,20)
+      factor1=factor2*2
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Complete the subtraction sentence',is_horizonal_equation=random.choice([False,True]))
+  874:
+    scripts:  |
+      '''Subtract multiples of 10'''
+      factor1 = random.randint(1,9)
+      factor1*=10
+      factor2 = random.randint(0,factor1)
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Complete the subtraction sentence',is_horizonal_equation=random.choice([False,True]))
+  875:
+    scripts:  |
+      '''Subtract a multiples of 10'''
+      factor1 = random.randint(10,99)
+      factor2 = random.randint(0,factor1//10)*10
+      html_arguments=two_numbers_operation(factor1,factor2,operation='-', question_title='Complete the subtraction sentence',is_horizonal_equation=random.choice([False,True]))
+  876:
+    scripts:  |
+      '''Addition and subtraction - ways to make a number'''
+      target = random.randint(5,20)
+      answer_options = []
+      correct_value_index = []
+      for x in range(6):
+          is_correct = random.choice([True,False])
+          answer_options.append(utils.make_a_formula(target=target,operation=random.choice(['+','-']),is_correct=is_correct,is_formula=True))
+          if is_correct:
+              correct_value_index.append(x)
+      if not correct_value_index:
+          answer_options.append(utils.make_a_formula(target=target,operation=random.choice(['+','-']),is_correct=True,is_formula=True))
+          correct_value_index.append(5)
+      question_title = 'Pick up the subtraction/addition sentences which gives {}.'.format(target)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',checkbox_type='multiple_choice_option', correct_value_index=correct_value_index,option_width=250)
+  877:
+    scripts:  |
+      '''Which sign makes the number sentence true?'''
+      answer_options = ['+','–']
+      correct_value_index=random.randint(0,1)
+      factor1 = random.randint(1,20)
+      factor2 = random.randint(1,20)
+      if correct_value_index==0:
+          formula = '{}?{}={}'.format(factor1,factor2,factor1+factor2)
+      else:
+          formula = '{}?{}={}'.format(factor1+factor2,factor1,factor2)
+      question_title = 'Pick up the sign to make the sentences right</br><strong>{}</strong>.'.format(formula)
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox', correct_value_index=correct_value_index,option_width=250)
+  878:
+    scripts:  |
+      '''Fact families'''
+      factor1,factor2 = random.choice([(x1,x2) for x1 in range(1,21) for x2 in range(1,21) if x1!=x2])
+      formulas = ['{}+{}={}'.format(factor1,factor2,factor1+factor2),'{}+{}={}'.format(factor2,factor1,factor1+factor2),
+          '{}-{}={}'.format(factor1+factor2,factor2,factor1),'{}-{}={}'.format(factor1+factor2,factor1,factor2)]
+      random.shuffle(formulas)
+      correct_value=formulas[-1]
+      question_title='What fact is missing from this fact family?<br>{}'.format('<br>'.join(formulas[:-1]))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox', input_type='text')
+  879:
+    scripts:  |
+      '''Addition and subtraction facts - up to 10'''
+      factor1 = random.randint(2,10)
+      factor2 = random.randint(2,10)
+      html_arguments1=two_numbers_operation(factor1,factor2,operation='+',is_horizonal_equation=random.choice([True,False]))
+      html_arguments2=two_numbers_operation(factor1+factor2,factor1,operation='-',is_horizonal_equation=random.choice([True,False]))
+      html_arguments = random.choice([html_arguments1,html_arguments2])
+  880:
+    scripts:  |
+      '''Addition and subtraction facts - up to 20'''
+      factor1 = random.randint(10,20)
+      factor2 = random.randint(1,20)
+      html_arguments1=two_numbers_operation(factor1,factor2,operation='+',is_horizonal_equation=random.choice([True,False]))
+      html_arguments2=two_numbers_operation(factor1+factor2,factor1,operation='-',is_horizonal_equation=random.choice([True,False]))
+      html_arguments = random.choice([html_arguments1,html_arguments2])
+  881:
+    scripts:  |
+      '''Addition and subtraction word problems'''
+      wordproblem = random.choice(WordQuestion.objects.filter(question_factors=2))
+      if wordproblem.question_type=='Subtraction':
+          factor1 = random.randint(10,20)
+          factor2 = random.randint(1,factor1)
+      else:
+          factor1 = random.randint(1,20)
+          factor2 = random.randint(1,20)
+      formula = wordproblem.answer_formula
+      q_instance = wordproblem.get_question_instance()
+      correct_value = eval(formula.format(factor1=factor1,factor2=factor2))
+      factor_font = '<font color="red"><strong>{}</strong></font>'
+      question_title = q_instance.format(factor1=factor_font.format(factor1),factor2=factor_font.format(factor2))
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='checkbox')
+  882:
+    scripts:  |
+      '''Addition and subtraction sentences: which is true?'''
+      answer_options = []
+      correct_value_index = []
+      is_corrects = random.sample([True,False],2)
+      for i, is_correct in enumerate(is_corrects):
+          target = random.randint(5,20)
+          answer_options.append(utils.make_a_formula(target=target,operation=random.choice(['+','-']),is_correct=is_correct,is_formula=True, is_full_formula=True))
+          if is_correct:
+              correct_value_index.append(i)
+      question_title = 'Pick up the subtraction/addition sentences that is correct?'
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox', correct_value_index=correct_value_index,option_width=250)
+  883:
+    scripts:  |
+      '''Ten more or less'''
+      anchor_number = random.randint(11,99)
+      directions=[('more',10),('less',-10)]
+      d = random.choice(directions)
+      question_title='What is the number that is <strong>10 {} than {}</strong>?'.format(d[0],anchor_number)
+      correct_value = anchor_number+d[1]
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='checkbox')
+  884:
+    scripts:  |
+      '''Add and subtract tens'''
+      factor1 = random.randint(10,99)
+      factor2 = random.randint(1,9)*10
+      operation = random.choice(['+','-'])
+      if operation=='+':
+          factor1, factor2 = random.choice([(x1,x2) for x1 in range(1,99) for x2 in range(10,100,10) if x1+x2<100])
+      else:
+          factor1, factor2 = random.choice([(x1,x2) for x1 in range(1,99) for x2 in range(10,100,10) if x1-x2>0])
+      html_arguments=two_numbers_operation(factor1,factor2,operation=operation,is_horizonal_equation=random.choice([True,False]))
+  885:
+    scripts:  |
+      '''Addition and subtraction terms'''
+      addition_terms = ['addend','addend','sum']
+      subtraction_terms = ['minuend','subtrahend','difference']
+      factor1 = random.randint(10,99)
+      factor2 = random.randint(1,9)*10
+      operation = random.choice(['+','-'])
+      if operation=='+':
+          factor1, factor2 = random.choice([(x1,x2) for x1 in range(1,99) for x2 in range(1,99) if x1+x2<100])
+          correct_options = random.choice(list(zip([factor1,factor2,factor1+factor2],addition_terms)))
+          answer_options=['addend','sum']
+          formula = '{}+{}={}'.format(factor1,factor2,factor1+factor2)
+      else:
+          factor1, factor2 = random.choice([(x1,x2) for x1 in range(1,99) for x2 in range(10,100,10) if x1-x2>0 and x1-x2!=x2])
+          correct_options = random.choice(list(zip([factor1,factor2,factor1-factor2],subtraction_terms)))
+          answer_options=subtraction_terms
+          formula = '{}–{}={}'.format(factor1,factor2,factor1-factor2)
+      question_title = 'In the following question, what is {}?</br><strong>{}</strong>'.format(correct_options[0],formula)
+      correct_value_index = answer_options.index(correct_options[1])
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  886:
+    scripts:  |
+      '''Comparing - review'''
+      option = random.choice([('fewer',-1),('more',1)])
+      shapes = random.sample(['triangle', 'square', 'pentagon', 'octagon', 'circle']*2,2)
+      question_title='Which picture shows has {} shapes?'.format(option[0])
+      counts = random.sample(range(1,21),2)
+      picture_options=['shapes/{}_2_vertical_count{}.png'.format(s,c) for s,c in zip(shapes,counts)]
+      if option[1]==1 and counts[0]>counts[1]:
+          correct_value_index=0
+      else:
+          correct_value_index=1
+      html_arguments=simple_question(question_title,answer_options=picture_options,option_type='image_checkbox',correct_value_index=correct_value_index)
+  887:
+    scripts:  |
+      '''Compare numbers up to 10 using words'''
+      counts = [random.randint(0,10),random.randint(0,10)]
+      question_title='Which words make the sentence correct?</br>{}_____{}'.format(counts[0],counts[1])
+      if counts[0]>counts[1]:
+          correct_value_index=0
+      elif counts[0]==counts[1]:
+          correct_value_index=1
+      else:
+          correct_value_index=2
+      answer_options=[random.choice(['is greater than','is larger than','is bigger than','is more than']),random.choice(['equals','the same as']),random.choice(['is less than','is smaller than'])]
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  888:
+    scripts:  |
+      '''Compare numbers up to 10 using words'''
+      counts = [random.randint(0,10),random.randint(0,10)]
+      question_title='Which words make the sentence correct?</br>{}_____{}'.format(counts[0],counts[1])
+      if counts[0]>counts[1]:
+          correct_value_index=0
+      elif counts[0]==counts[1]:
+          correct_value_index=1
+      else:
+          correct_value_index=2
+      answer_options=['>','=','<']
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  889:
+    scripts:  |
+      '''Compare numbers up to 100 using words'''
+      counts = [random.randint(11,100),random.randint(11,100)]
+      question_title='Which words make the sentence correct?</br>{}_____{}'.format(counts[0],counts[1])
+      if counts[0]>counts[1]:
+          correct_value_index=0
+      elif counts[0]==counts[1]:
+          correct_value_index=1
+      else:
+          correct_value_index=2
+      answer_options=[random.choice(['is greater than','is larger than','is bigger than','is more than']),random.choice(['equals','the same as']),random.choice(['is less than','is smaller than'])]
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  890:
+    scripts:  |
+      '''Compare numbers up to 100 using words'''
+      counts = [random.randint(11,100),random.randint(11,100)]
+      question_title='Which words make the sentence correct?</br>{}_____{}'.format(counts[0],counts[1])
+      if counts[0]>counts[1]:
+          correct_value_index=0
+      elif counts[0]==counts[1]:
+          correct_value_index=1
+      else:
+          correct_value_index=2
+      answer_options=['>','=','<']
+      html_arguments=simple_question(question_title, answer_options=answer_options,option_type='checkbox',correct_value_index=correct_value_index,option_width=150)
+  891:
+    scripts:  |
+      '''Comparison word problems'''
+      #TODO
+      html_arguments=simple_question('In development',correct_value=None)
+  892:
+    scripts:  |
+      '''Estimate to the nearest ten'''
+      #TODO
+      html_arguments=simple_question('In development',correct_value=None)
+  893:
+    scripts:  |
+      '''Place value models up to 20'''
+      question_title='What number does the picture shows?'
+      correct_value = random.randint(1,20)
+      html_arguments=simple_question(question_title,answer_options=[correct_value],option_type='inputbox', question_pictures=['blocks/cube_vertical3_units_{}_{}.png'.format(correct_value,random.randint(1,5))])
+  894:
+    scripts:  |
+      '''Write numbers as tens and ones up to 20'''
+      '''896,897'''
+      question_title='Fill the missing places?'
+      correct_value = random.choice([random.randint(1,20),random.randint(11,20)])
+      tens = correct_value//10
+      ones = correct_value%10
+      if random.randint(0,1)==0:
+          indicators = random.choice([['number','display','number','display','display'],['display','display','number','display','display'],['number','display','display','display','display'],['display','display','display','display','number']])
+          values = [tens,' tens + ',ones,' ones= ',correct_value]
+          horizonal_equations=list(zip(indicators,values))
+      else:
+          indicators = random.choice([['display','display','number','display','number','display'],['number','display','display','display','display','display'],['display','display','number','display','display','display'],['display','display','display','display','number','display']])
+          values = [correct_value,' = ',tens,' tens + ',ones,' ones']
+          horizonal_equations=list(zip(indicators,values))
+      html_arguments=two_numbers_operation(0,0,question_title=question_title,horizonal_equations=horizonal_equations,is_horizonal_equation=True)
+  895:
+    scripts:  |
+      '''Place value models up to 100'''
+      correct_value,wrong_value = random.sample(range(10,100),2)
+      question_title='Which graph shows {}?'.format(correct_value)
+      correct_pic='blocks/cube_vertical3_units_{}_{}.png'.format(correct_value,random.randint(1,5))
+      wrong_pic = 'blocks/cube_vertical3_units_{}_{}.png'.format(wrong_value,random.randint(1,5))
+      if random.randint(0,1)==0:
+          correct_value_index=0
+          picture_options=[correct_pic,wrong_pic]
+      else:
+          correct_value_index=1
+          picture_options=[wrong_pic,correct_pic]
+
+      interpretable_arguments = {'correct_value':correct_value,'wrong_value':wrong_value}
+      html_arguments=simple_question(question_title,answer_options=picture_options,break_index=[0,1,2],option_type='image_checkbox',correct_value_index=correct_value_index)
+  903:
+    scripts:  |
+      '''Which picture graph is correct?'''
+      image_counts = random.choice([(x1,x2,x3) for x1 in range(2,20) for x2 in range(2,20) for x3 in range(20) if x1+x2+x3>=10 and x1+x2+x3<=20])
+      interpretable_arguments = {'image_counts':image_counts}
+      html_arguments = graph_data(image_counts,table_type='list')
+  904:
+    scripts:  |
+      '''Interpret picture graphs'''
+
+      fruits = ['apple','avocado','banana','cherry','citrus','grapes','hazelnut','kiwi','lemon','nut','orange','peach','pear','pineapple','plum','raspberry','strawberry','watermelon']
+      foods = ['bread','biscuit','cheese','coffee','egg','hamburger','hot dog','pizza','popcorn','pretzel','quesadilla','sausages','steak','taco','toast']
+      items = ['key','binoculars','sugar cube','popcorn','gingerbread house','pancake','mailbox','cup']
+
+      g = random.choice([fruits,items,foods])
+      image_names = random.sample(g,3)
+      image_counts = random.choice([(x1,x2,x3) for x1 in range(2,20) for x2 in range(2,20) for x3 in range(20) if x1+x2+x3>=10 and x1+x2+x3<=20 and (x1-x2)*(x2-x3)*(x1-x3)!=0])
+
+      #Random variables are saved as interpretable_arguments
+      interpretable_arguments = {'image_names':image_names,'image_counts':image_counts}
+
+      html = utils.create_table_html(image_names,image_counts,table_type='list')
+      question_title='Which item is the most?</br>{}'.format(html)
+      if image_counts[0]>image_counts[1] and image_counts[0]>image_counts[2]:
+          correct_value_index=0
+      elif  image_counts[0]<image_counts[1] and image_counts[1]>image_counts[2]:
+          correct_value_index=1
+      else:
+          correct_value_index=2
+
+      html_arguments = simple_question(question_title,answer_options=image_names,option_type='checkbox', option_width=150,correct_value_index=correct_value_index)
+  905:
+    scripts:  |
+      '''Which tally chart is correct?'''
+      in_order=False
+      align='random'
+      if question_difficulty_level == 0:
+          image_counts = random.choice([(x1,x2) for x1 in range(1,10) for x2 in range(1,10) if x1+x2<=10])
+      elif question_difficulty_level == 1:
+          image_counts = random.choice([(x1,x2) for x1 in range(2,20) for x2 in range(2,20) if x1+x2>=10 and x1+x2<=20])
+      elif question_difficulty_level == 2:
+          image_counts = random.choice([(x1,x2,x3) for x1 in range(2,20) for x2 in range(2,20) for x3 in range(1, 20) if x1+x2+x3>=10 and x1+x2+x3<=20])
+      elif question_difficulty_level == 3:
+          image_counts = random.choice([(x1,x2,x3) for x1 in range(2,20) for x2 in range(2,20) for x3 in range(1, 20) if x1+x2+x3>=20 and x1+x2+x3<=30])
+      interpretable_arguments = {'image_counts':image_counts}
+      html_arguments = graph_data(image_counts,table_type='tally',align=align,in_order=in_order)
+  912:
+    scripts:  |
+      '''Read a thermometer'''
+      min = random.choice(range(0,40,10))
+      max = min+50
+      correct_value = random.choice(range(min,max,5))
+      question_title='''What temperature does the thermometer shows?<br>
+      <div class = "flex-row" >
+        <div class = "col-10">
+          <div id="thermo" data-width='80' data-height='250' data-minTemp='{}' data-currentTemp='{}' data-maxTemp='{}' ></div>
+        </div>
+        </div>'''.format(min,correct_value,max)
+      interpretable_arguments ={'correct_value':correct_value}
+      html_arguments = simple_question(question_title,answer_options=[correct_value],option_type='inputbox')
+  918:
+    scripts:  |
+      '''Measure length with objects'''
+      html_arguments = measure_picture()
+  919:
+    scripts:  |
+      '''Counting the money'''
+      coins = random.choice([(x, y, z) for x in range(5) for y in range(5) for z in range(5) if x+y+z > 2])
+      html_arguments = money_counting(coins_dict={'penny': coins[0], 'dime': coins[1], 'quarter': coins[2]})

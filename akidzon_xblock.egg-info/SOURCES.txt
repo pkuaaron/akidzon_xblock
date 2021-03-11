@@ -1,0 +1,13 @@
+setup.py
+akidzon/__init__.py
+akidzon/akidzon.py
+akidzon/static/README.txt
+akidzon/static/css/akidzon.css
+akidzon/static/html/akidzon.html
+akidzon/static/js/src/akidzon.js
+akidzon_xblock.egg-info/PKG-INFO
+akidzon_xblock.egg-info/SOURCES.txt
+akidzon_xblock.egg-info/dependency_links.txt
+akidzon_xblock.egg-info/entry_points.txt
+akidzon_xblock.egg-info/requires.txt
+akidzon_xblock.egg-info/top_level.txt

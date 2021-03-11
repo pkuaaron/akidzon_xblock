@@ -1,0 +1,32 @@
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#skillModal" data-whatever="@mdo">By Skills</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gradeModal" data-whatever="@fat">By Grade</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#subjectModal" data-whatever="@getbootstrap">By Subject</button>
+
+<div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
+  <div class="modal-content" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="skillModalLabel">Select skill</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <ul class="list-group list-group-flush">
+              <div id = 'category_list_html'>
+                {% autoescape off %}
+                  {{category_list_html}}
+                {% endautoescape %}
+              </div>
+            </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

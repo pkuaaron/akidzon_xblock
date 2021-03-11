@@ -1,0 +1,6 @@
+git+https://github.com/edx/xblock-utils.git@v1.2.3#egg=xblock-utils
+sqlalchemy
+pymysql
+inflect
+pyquery
+

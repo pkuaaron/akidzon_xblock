@@ -1,0 +1,52 @@
+{% load static %}
+
+{% if is_show_question_title %}
+<div class = "flex-row" >
+  <div class = "col-10">
+  <button type="button" class="btn btn-secondary disabled" name='category_id' id='category_id' hidden>{{category_id}}</button>
+    <table>
+    <tr>
+      <td><h4>{% autoescape off %}{{question_title}}{% endautoescape %}</h4></td>
+    </tr>
+    </table>
+    <input name='skipcounting' id='skipcounting' type="text" hidden value='{{skipcounting}}'>
+  </div>
+</div>
+
+{% endif %}
+
+<div class = "flex-row" >
+  <div class = "col-10">
+      <td><h4>{% autoescape off %}{{question_table}}{% endautoescape %}</h4></td>
+  </div>
+</div>
+<div class = "flex-row" >
+  <div class = "col-10">
+      <table>
+        <tr>
+        {% for img in question_pictures %}
+          <td style = '{{img.td_style}}'>
+            <img class='{{img.html_tag_css}}' src = " {% static 'akidzon_icons/' %}{{img.img_src}}" style = "{{img.img_style}}" >
+          </td>
+          {% if img.new_row %}
+            </tr><tr>
+          {% endif %}
+        {% endfor %}
+        </tr>
+      </table>
+  </div>
+</div>
+
+{% if graph_images %}
+<div class = "flex-row" >
+  <div class = "col-10">
+    <div class="card" style="width: {{canvas_width}}; height:{{canvas_height}}">
+      <div class="card-body">
+        {% for css, img_src in graph_images %}
+          <img src="{% static 'akidzon_icons/' %}{{img_src}}" style="{{css}}">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

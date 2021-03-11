@@ -1,0 +1,101 @@
+{% load static %}
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <div class="">
+      <button type="button" class="btn btn-secondary disabled" name='category_id' id='category_id' hidden>{{category_id}}</button>
+        <h4>{{question_title}}</h4>
+        <table>
+            <tr>
+            {% for i, pic in picture_pattern%}
+                {% if i in break_index %}
+                </tr><tr>
+                {% endif %}
+                {% if i in missed_pic_index %}
+                    <td  align="right" class='form_to_be_checked bg-info' id='table_td_answer_{{i}}' value_to_check="{% static 'akidzon_icons/' %}{{pic}}" cell_checked="">
+                        <div id="content{{i}}" class='droppable_content' style='width:50px;height: 50px'></div>
+                    </td>
+                {% else %}
+                    <td align="right"><img src="{% static 'akidzon_icons/' %}{{pic}}" alt="" style='width:50px;'></td>
+                {% endif %}
+            {% endfor %}
+            </tr>
+            <tr>
+                {% for j,pic in missed_picture_options %}
+                    <td style='padding-top: 25px;'><div class="draggable_picture" id='img{{j}}'><img src="{% static 'akidzon_icons/' %}{{pic}}"  style='width:50px; ' alt=""></div></td>
+                {% endfor %}
+            </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+$(function () {
+  $('.droppable_content').sortable({
+      placeholder: 'ui-state-highlight'
+  })
+  $(".draggable_picture").draggable({
+      connectToSortable: '.droppable_content',
+      helper: myHelper,
+  })
+
+function myHelper(event) {
+    return $(this).clone();
+}
+
+var pastDraggable=[];
+var dragged_index=0;
+$(".droppable_content").droppable({
+    over: function(event, ui) {
+      // td=$(this).closest('td');
+      // $('#'+td.attr('id')+' img').remove()
+    },
+    drop: handleDragStop
+})
+
+function itemDropped(dragged_item,target){
+  td=target.closest('td');
+  imgs = $('#'+td.attr('id')+' img');
+  for(i = 0; i< imgs.length-1; i++){
+      imgs[i].remove()
+  }
+  debugger;
+  td.attr('cell_checked',dragged_item.find('img').attr('src'));
+  // td.html(dragged_item.find('img').attr('src'));
+  dragged_index++;
+  dragged_item.attr('id', target.attr('id')+'_'+ dragged_item.attr('id')+'_dragged'+dragged_index);
+  $('.droppable_content img').dblclick(function () {
+      $(this).remove();
+  });
+  //Get the current draggable object
+  var currentDraggable = dragged_item.attr('id');
+  //If there is an object prior to the current one
+  for (index = 0; index < pastDraggable.length; index++){
+    if (pastDraggable[index].startsWith( target.attr('id')+'_') ) {
+        //Place past object into its original coordinate
+        $("#" + pastDraggable[index]).remove();
+    }
+  }
+  pastDraggable = pastDraggable.filter(p => !p.startsWith( target.attr('id')+'_')) ;
+  //Store the current draggable object
+  pastDraggable.push(currentDraggable);
+  $(".draggable_picture").draggable({
+      connectToSortable: '.droppable_content',
+      helper: myHelper,
+  })
+}
+
+function handleDragStop(event, ui) {
+  // $(this).addClass("ui-state-highlight").find("p").html("Dropped in " + this.id);
+    debugger;
+  dragged_item = $(ui.draggable);
+  itemDropped(dragged_item,$(this));
+}
+// end of handleDragStop
+
+
+});
+</script>
