@@ -24,7 +24,6 @@ loader = ResourceLoader(__name__)  # pylint: disable=invalid-name
 
 question_status_color_pair = {True: 'success', False: 'secondary', None: 'danger'}
 
-
 class AkidzonXBlock(XBlock):
     """
     TO-DO: document what your XBlock does.
@@ -128,7 +127,7 @@ class AkidzonXBlock(XBlock):
         print(f'get_questionbody self.question_id: {self.question_id}')
 
         html_template_path = pyml['QuestionCategory'][category_id].get('html_template_path', 'questions_templates/simple_question.html')
-        # html_template_path = os.path.join(os.path.dirname(__file__), 'templates', html_template_path)
+        html_template_path = os.path.join(os.path.dirname(__file__), 'templates', html_template_path)
         cmd = pyml['QuestionCategory'][category_id]['scripts']
         displayanswer_cmd = pyml['QuestionCategory'][category_id].get('displayanswer_scripts', None)
 
