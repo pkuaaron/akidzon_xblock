@@ -9,8 +9,7 @@ function AkidzonXBlock(runtime, element) {
             src = src.replace('.png', '_bw.png');
             // $(this).css('background-color', 'gray');
             count_index = count_index + parseInt($("#skipcounting").val());
-            tag_img = '<img src = "{% static "akidzon_icons/counting_index/countingindex_count_index.png" %}" style = "position: relative; top: -70px; left: 20px; z-index: 2;" >'.replace('count_index', count_index);
-            $(this).parents('td').append(tag_img)
+
         }
         $(this).attr("src", src);
     }
