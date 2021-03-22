@@ -23,7 +23,7 @@ def get_assessment_questions(student_id, assessment_id, question_id=None):
 
 
 def get_question_category():
-    df = pd.read_sql_query(session.query(QuestionCategory).filter(QuestionCategory.has_implemented == True).statement, session.bind)
+    df = pd.read_sql_query(session.query(QuestionCategory).filter(QuestionCategory.has_implemented == 1).statement, session.bind)
     df.sort_values(['id'], inplace=True)
     return df
 
