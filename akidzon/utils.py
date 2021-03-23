@@ -111,9 +111,9 @@ def create_table_html(image_names, image_counts, table_type='list'):
         trs.append('\n'.join(tds))
 
         trs1.append('''<tr><td><img src="{}" style='width:50px' alt=""></td><td style='width:100px' class='text-center'>{}</td></tr>'''.format(static('akidzon_icons/items/{}.png'.format(img)), cnt))
-        trs2.append('''<tr><td><img src="{}" style='width:50px' alt=""></td><td><img src="{}" style='height:50px' alt=""></td></tr>'''.format(static('akidzon_icons/items/{}.png'.format(img)),
-                                                                                                                                              static('akidzon_icons/counting_index/countingstick_{}.png'.format(cnt))))
-
+        # trs2.append('''<tr><td><img src="{}" style='width:50px' alt=""></td><td><img src="{}" style='height:50px' alt=""></td></tr>'''.format(static('akidzon_icons/items/{}.png'.format(img)),
+        #                                                                                                                                       static('akidzon_icons/counting_index/countingstick_{}.png'.format(cnt))))
+        trs2.append('''<tr><td></td></tr>''')
     if table_type == 'tally':
         correct_graph_html = '''<table  border="1" style='background: transparent'><tr><td class='text-center'>Item</td><td class='text-center'>Count</td></tr>{}</table>'''.format('\n'.join(trs2))
     elif table_type == 'count':
